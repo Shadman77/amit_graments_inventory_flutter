@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:project/config/endpoints.dart';
 import 'package:project/register.dart';
 // ignore: depend_on_referenced_packages
 import 'package:http/http.dart' as http;
@@ -41,9 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   //goolginh wait
 
   Future login() async {
-    const rootURL = '10.0.1.197'; 
-    // const rootURL = 'localhost'; 
-    var url = Uri.http(rootURL,'/f/login.php');
+    var url = Uri.http(BASE_URL, '/login.php');
     var response = await http.post(url, body: {
       "username": user.text,
       "password": pass.text,
