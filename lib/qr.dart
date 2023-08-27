@@ -20,7 +20,7 @@ List<String> dropdownItems2 = ['1', '2', '3'];
 class _qrState extends State<qr> {
   String? _qrInfo = 'Scan a QR Code';
   bool camState = false;
-  Future knit() async {
+  Future knit1() async {
     print("==============================");
     // var url = Uri.http("10.0.1.197",'/f/knit.php', {'q': '{http}'});
     var url = Uri.http(BASE_URL, '/f/knit.php');
@@ -37,14 +37,14 @@ class _qrState extends State<qr> {
       Fluttertoast.showToast(
         backgroundColor: Colors.orange,
         textColor: Colors.white,
-        msg: 'User already exist!',
+        msg: 'Data Not Saved',
         toastLength: Toast.LENGTH_SHORT,
       );
     } else {
       Fluttertoast.showToast(
         backgroundColor: Colors.green,
         textColor: Colors.white,
-        msg: 'Registration Successful',
+        msg: 'Data Saved',
         toastLength: Toast.LENGTH_SHORT,
       );
     }
@@ -85,10 +85,10 @@ class _qrState extends State<qr> {
       body: camState
           ? Container(
               decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/cat2.png"),
-                    fit: BoxFit.cover),
-              ),
+                  // image: DecorationImage(
+                  //     image: AssetImage("assets/images/cat2.png"),
+                  //     fit: BoxFit.cover),
+                  ),
               child: SizedBox(
                 height: 1000,
                 width: 500,
@@ -270,7 +270,7 @@ class _qrState extends State<qr> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              knit();
+                              knit1();
                             },
                             child: Container(
                               height: 53,
@@ -305,7 +305,7 @@ class _qrState extends State<qr> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              knit();
+                              knit1();
                             },
                             child: Container(
                               height: 53,
