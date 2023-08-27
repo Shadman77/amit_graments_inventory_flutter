@@ -18,10 +18,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      // theme: ThemeData(
+      //     // primarySwatch: Colors.blue,
+      //     // visualDensity: VisualDensity.adaptivePlatformDensity,
+      //     ),
       home: const MyHomePage(),
     );
   }
@@ -41,9 +41,9 @@ class _MyHomePageState extends State<MyHomePage> {
   //goolginh wait
 
   Future login() async {
-    const rootURL = '10.0.1.197'; 
-    // const rootURL = 'localhost'; 
-    var url = Uri.http(rootURL,'/f/login.php');
+    const rootURL = '10.0.1.197';
+    // const rootURL = 'localhost';
+    var url = Uri.http(rootURL, '/f/login.php');
     var response = await http.post(url, body: {
       "username": user.text,
       "password": pass.text,
@@ -85,9 +85,16 @@ class _MyHomePageState extends State<MyHomePage> {
           height: double.infinity,
           width: double.infinity,
           alignment: Alignment.center,
+          // decoration: BoxDecoration(
+          //     gradient: LinearGradient(
+          //         colors: [Colors.teal.shade200, Colors.purple.shade900])),
+
           decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [Colors.teal.shade200, Colors.purple.shade900])),
+            image: const DecorationImage(
+                image: AssetImage("dp.jpg"), fit: BoxFit.cover),
+            borderRadius: BorderRadius.circular(10),
+          ),
+
           child: SingleChildScrollView(
             child: Column(
               children: [
