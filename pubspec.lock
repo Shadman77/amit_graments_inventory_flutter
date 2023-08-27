@@ -70,6 +70,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.2"
+  flutter_qr_bar_scanner:
+    dependency: "direct main"
+    description:
+      name: flutter_qr_bar_scanner
+      sha256: "32f8f8dc93e308f177ce8c0379f575a9a14c2d7cb98d6a136c0108e67e7ac379"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.2"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -144,6 +152,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
+  native_device_orientation:
+    dependency: transitive
+    description:
+      name: native_device_orientation
+      sha256: "7d2fa1a1420b7b4ac3317760ffd063b86704679fb4f1796644581da4a6356ccc"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.4"
   path:
     dependency: transitive
     description:
@@ -152,6 +168,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+  qrscan:
+    dependency: "direct main"
+    description:
+      name: qrscan
+      sha256: "0ee72eca0dcbc35ab74894010e3589c3675ddb7c5a551d5f29ab0d3bb1bfb135"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.3"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -223,4 +247,4 @@ packages:
     version: "2.1.4"
 sdks:
   dart: ">=3.0.0 <4.0.0"
-  flutter: ">=1.10.0"
+  flutter: ">=2.0.0"
